@@ -1,0 +1,182 @@
+	<!-- Page Wrapper -->
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<app-menu></app-menu>
+		<!-- End of Sidebar -->
+
+		<!-- Content Wrapper -->
+		<div id="content-wrapper" class="d-flex flex-column">
+
+			<!-- Main Content -->
+			<div id="content">
+
+				<!-- Topbar -->
+				<app-cabecera></app-cabecera>
+				<!-- End of Topbar -->
+
+				<!-- Begin Page Content -->
+				<div class="container-fluid">
+
+					<!-- Page Heading -->
+					<h1 class="h3 mb-2 text-gray-800">Empresas</h1>
+
+					<!-- DataTales Example -->
+					<div class="card shadow mb-4">
+						<div class="card-body">
+						 	<form class="user">
+								<div class="form-group row">
+									<div class="col-sm-6 mb-3 mb-sm-0">
+										<label for="">Empresa</label>
+										<input type="text" class="form-control" id="" placeholder="">
+									</div>
+									<div class="col-sm-6">
+										<label for="">Imagen</label>
+										<div class="input-group mb-12">
+											<div class="input-group-prepend">
+												<span class="input-group-text" id="inputGroupFileAddon01">Imagen</span>
+											</div>
+											<div class="custom-file">
+												<input type="file" class="custom-file-input" id="" aria-describedby="">
+												<label class="custom-file-label" for="inputGroupFile01">Seleccionar</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+
+            <div class="col-lg-12">
+							<div class="card shadow mb-12">
+								<div class="card-header py-3">
+								<h6 class="m-0 font-weight-bold text-primary">Locales</h6>
+								</div>
+								<div class="card-body">
+									<form class="user">
+										<div class="form-group row">
+											<div class="col-sm-6 mb-3 mb-sm-0">
+												<label for="">Empresa</label>
+												<input type="text" class="form-control" id="" placeholder="">
+											</div>
+											<div class="col-sm-6">
+												<label for="">Longitud</label>
+												<input type="text" class="form-control" id="" placeholder="">
+											</div>
+										</div>
+										<div class="form-group row">
+											<div class="col-sm-6 mb-3 mb-sm-0">
+												<label for="">Dirección</label>
+												<input type="text" class="form-control" id="" placeholder="">
+											</div>
+											<div class="col-sm-6">
+												<label for="">Latitud</label>
+												<input type="text" class="form-control" id="" placeholder="">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="">Horario 1</label>
+                  		<input type="email" class="form-control" id="" placeholder="">
+                		</div>
+										<div class="form-group">
+											<label for="">Horario 2</label>
+                  		<input type="email" class="form-control" id="" placeholder="">
+                		</div>
+				            <a href="#" class="btn btn-primary btn-icon-split float-right">
+			                <span class="icon text-white-50">
+			                  <i class="fa fa-plus"></i>
+			                </span>
+			                <span class="text">Agregar Local</span>
+			              </a>
+									</form>
+								</div>
+							</div>
+						</div>
+						<br />
+						<div class="card-body">
+	            <div class="table-responsive">
+	              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+	                <thead>
+	                  <tr>
+	                    <th>Nombre</th>
+	                    <th>Dirección</th>
+	                    <th>Longitud</th>
+	                    <th>Latitud</th>
+	                    <th>Accción</th>
+	                  </tr>
+	                </thead>
+                  <tbody>
+                    <tr>
+                      <td>Local 1</td>
+                      <td>Direccion 1</td>
+                      <td>xxxx</td>
+                      <td>xxxx</td>
+                      <td><a href="#" class="btn btn-success btn-circle btn-sm">
+                          <i class="fa fa-pencil"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Local 1</td>
+                      <td>Direccion 1</td>
+                      <td>xxxx</td>
+                      <td>xxxx</td>
+                      <td><a href="#" class="btn btn-success btn-circle btn-sm">
+                          <i class="fa fa-pencil"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Local 1</td>
+                      <td>Direccion 1</td>
+                      <td>xxxx</td>
+                      <td>xxxx</td>
+                      <td><a href="#" class="btn btn-success btn-circle btn-sm">
+                          <i class="fa fa-pencil"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Local 1</td>
+                      <td>Direccion 1</td>
+                      <td>xxxx</td>
+                      <td>xxxx</td>
+                      <td><a href="#" class="btn btn-success btn-circle btn-sm">
+                          <i class="fa fa-pencil"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+	              </table>
+	            </div>  
+	            <a href="#" class="btn btn-success btn-icon-split float-right">
+                <span class="icon text-white-50">
+                  <i class="fa fa-check"></i>
+                </span>
+                <span class="text">Registrar Empresa</span>
+              </a>
+	          </div>  
+					</div>
+
+				</div>
+				<!-- /.container-fluid -->
+
+			</div>
+			<!-- End of Main Content -->
+
+			<!-- Footer -->
+			<app-footer></app-footer>
+			<!-- End of Footer -->
+
+		</div>
+		<!-- End of Content Wrapper -->
+
+	</div>
+	<!-- End of Page Wrapper -->
+
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top">
+		<i class="fa fa-angle-up"></i>
+	</a>
+
+	<!-- Logout Modal-->
+  <app-msesion></app-msesion>
