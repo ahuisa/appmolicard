@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, CanActivate } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { BeneficiosComponent } from './pages/beneficios/beneficios.component';
 import { RegistrarBeneficioComponent } from './pages/registrar-beneficio/registrar-beneficio.component';
 import { RegistrarEmpresaComponent } from './pages/registrar-empresa/registrar-empresa.component';
 import { EmpresasComponent } from './pages/empresas/empresas.component';
+
+import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
 	{
@@ -18,6 +20,7 @@ const routes: Routes = [
   	},
     {
       path : 'beneficios',
+      canActivate: [AuthGuard],
       component: BeneficiosComponent
     },
     {

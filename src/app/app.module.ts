@@ -13,6 +13,10 @@ import { RegistrarEmpresaComponent } from './pages/registrar-empresa/registrar-e
 import { FooterComponent } from './componentes/footer/footer.component';
 import { MsesionComponent } from './componentes/msesion/msesion.component';
 
+import { JwtModule } from "@auth0/angular-jwt";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,13 @@ import { MsesionComponent } from './componentes/msesion/msesion.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {}
+    }),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

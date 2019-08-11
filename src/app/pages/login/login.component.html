@@ -15,12 +15,18 @@
                 <div class="text-center">
                   <h1 class="h4 text-gray-900 mb-4"><img src="./assets/img/logo.png"></h1>
                 </div>
-                <form class="user">
+                <form class="user" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Usuario">
+                    <input type="email" class="form-control form-control-user" formControlName="username" placeholder="Usuario" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                      <div *ngIf="f.username.errors.required">Debe ingresar el usuario</div>
+                    </div>
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Contraseña">
+                    <input type="password" class="form-control form-control-user" formControlName="password" placeholder="Contraseña" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                      <div *ngIf="f.password.errors.required">Debe ingresar su Contraseña</div>
+                    </div>
                   </div>
                   <div class="form-group">
                     <div class="custom-control custom-checkbox small">
@@ -28,9 +34,11 @@
                       <label class="custom-control-label" for="customCheck">Recordar contraseña</label>
                     </div>
                   </div>
-                  <a [routerLink]="['/beneficios']" class="btn btn-primary btn-user btn-block">
-                    Ingresar
-                  </a>
+                  <button [disabled]="loading" class="btn btn-primary btn-user btn-block">Ingresar</button>
+                  <br />
+                  <div *ngIf="error" class="alert alert-danger alert-dismissible fade show">
+                    {{error}}
+                  </div>
                 </form>
                 <hr>
               </div>
